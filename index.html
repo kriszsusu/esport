@@ -1,190 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pollák E-Sport Bajnokság 2025</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollák E-sport Bajnokság 2025</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>  
-  <div id="loading">
-    <div class="loader"></div>
-  </div>
-
-  <section id="hero">
-    <div class="hero-tartalom">
-      <a href="https://www.youtube.com/channel/UCAapvtrYOO7sTtdOH8E2yhQ" target="_blank"><img src="assets/esport-logo.png" alt="Pollák E-Sport Logo" class="logo"></a>
-      <h1>Pollák E-Sport Bajnokság 2025</h1>
-      <p>Csatlakozz a játékba!</p>
-      <a href="#register" class="cta-button">Regisztráljon most</a>
+<body>
+    <div class="spinner-container">
+        <div class="spinner"></div>
     </div>
-  </section>
 
-  <section id="mi-az-esport" class="parallax">
-    <div class="tartalom">
-      <h2>Mi az E-Sport?</h2>
-      <p>Az E-Sport a versenysport a maga nemében. A játékosok olyan népszerű játékokban versenyeznek a dicsőségért és a díjakért, mint a Fortnite, a Valorant, a Counter Strike 2 és a League of Legends!</p>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="content">
+            <img src="esport.png" alt="E-sport logó" />
+            <h1>Pollák E-sport Bajnokság 2025</h1>
+            <a href="#register" class="button">Regisztráció</a>
+        </div>
+    </section>
 
-  <section id="bajnoksag-reszletei">
-    <div class="tartalom">
-      <h2>Verseny részletei</h2>
-      <div class="timeline">
-        <div class="event">
-          <h3>Selejtezők</h3>
-          <p>január 15 - január 20</p>
+    <section class="whats-esport">
+        <div class="content">
+            <h1>Mi az E-sport?</h1>
+            <p>Az E-Sport a versenysport a maga nemében. A játékosok olyan népszerű játékokban versenyeznek a dicsőségért és a díjakért, mint a Fortnite, a Valorant, a Counter Strike 2 és a League of Legends!</p>
         </div>
-        <div class="event">
-          <h3>Elődöntők</h3>
-          <p>január 25 - január 27</p>
-        </div>
-        <div class="event">
-          <h3>Döntők</h3>
-          <p>február 1.</p>
-        </div>
-      </div>
-      <h3>Szabályok</h3>
-      <ul>
-        <li>Csak 7-8. osztályos tanulók vehetnek részt.</li>
-        <li>A csapatoknak 3-5 játékosból kell állniuk.</li>
-        <li>A fair play kötelező - nincs csalás!</li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section id="register">
-    <div class="tartalom">
-      <h2>Regisztrálj még most!</h2>
-      <form id="regisztracios-urlap">
-        <input type="text" id="name" placeholder="Neved" required>
-        <input type="number" id="grade" placeholder="Osztályod (7 vagy 8)" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <select id="game" required>
-          <option value="" disabled selected>Válaszd ki a játékot</option>
-          <option value="Fortnite">Fortnite</option>
-          <option value="Valorant">Valorant</option>
-          <option value="League of Legends">League of Legends</option>
-          <option value="CS2">Counter-Strike 2</option>
-        </select>
-        <button type="submit">Küldés</button>
-      </form>
-      <p>Eddig regisztrált: <span id="regisztralas-szamlalo">0</span></p>
-    </div>
-  </section>
+    <section class="event-details">
+        <div class="content">
+            <h1>Verseny részletei</h1>
+            <div class="timeline">
+                <div class="entry">
+                    <h2>Selejtező</h2>
+                    <p>2025. január 15-20.</p>
+                </div>
+                <div class="entry">
+                    <h2>Elődöntő</h2>
+                    <p>2025. január 25-27.</p>
+                </div>
+                <div class="entry">
+                    <h2>Döntő</h2>
+                    <p>2025. február 1.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="eredmenyek-jutalmak">
-    <div class="tartalom">
-      <h2>Eredmények és jutalmak</h2>
-      <div class="jutalmak">
-        <div class="jutalom">
-          <h3>1. hely</h3>
-          <p>100.000 Ft Mediamarkt ajándékutalvány + érem + trófea + oklevél</p>
+    <section class="rules">
+        <div class="content">
+            <h1>Szabályzat</h1>
+            <ol>
+                <li>
+                    Csak 7-8. osztályos tanulók vehetnek részt.
+                </li>
+                <li>
+                    A csapatoknak 3-5 játékosból kell állniuk.
+                </li>
+                <li>
+                    A fair play kötelező - nincs csalás!
+                </li>
+            </ol>
         </div>
-        <div class="jutalom">
-          <h3>2. hely</h3>
-          <p>50.000 Ft Mediamarkt ajándékutalvány + érem + + oklevél</p>
-        </div>
-        <div class="jutalom">
-          <h3>3. hely</h3>
-          <p>30.000 Ft Mediamarkt ajándékutalvány + érem + + oklevél</p>
-        </div>
-      </div>
-      <h3>Élő eredmények</h3>
-      <div id="elo-eredmenyek">
-        <p>Az eredményeket itt frissítjük a verseny ideje alatt.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="elozo-nyertesek">
-    <div class="tartalom">
-      <h2>Előző nyertesek</h2>
-      <div class="winners-grid">
-        <div class="nyertes">
-          <h3>2023 Bajnokai</h3>
-          <p>Csapat: Let Us Cook</p>
-          <p>Játék: Counter Strike 2</p>
-        </div>
-        <div class="nyertes">
-          <h3>2022 Bajnokai</h3>
-          <p>Csapat: Dragon Slayers</p>
-          <p>Játék: Valorant</p>
-        </div>
-        <div class="nyertes">
-          <h3>2021 Bajnokai</h3>
-          <p>Csapat: Pixel Warriors</p>
-          <p>Játék: League of Legends</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="registration" id="register">
+        <div class="content">
+            <form>
+                <h1>Regisztráció</h1>
 
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="grade">Osztály:</label>
+                <select name="grade" id="grade">
+                    <option disabled selected hidden>Válassz osztályt...</option>
+                    <option value="7">7. osztály</option>
+                    <option value="8">8. osztály</option>
+                </select>
 
+                <label for="email">E-mail cím:</label>
+                <input type="email" id="email" name="email" required>
 
-  <section id="sponsors">
-    <div class="tartalom">
-      <h2>Szponsorok</h2>
-      <div class="sponsors-grid">
-        <div class="sponsor-card">
-          <img src="assets/hszc.png" alt="Sponsor 1">
+                <input type="submit" value="Regisztráció elküldése">
+            </form>
         </div>
-        <div class="sponsor-card">
-          <img src="assets/mediam2.png" alt="Sponsor 2">
-        </div>
-        <div class="sponsor-card">
-          <img src="assets/rotary.svg" alt="Sponsor 3">
-        </div>
-        <div class="sponsor-card">
-          <img src="assets/pollaklogo.png" alt="Sponsor 4">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-
-  <section id="news">
-    <div class="tartalom">
-      <h2>Legfrissebb hírek</h2>
-      <div class="news-grid">
-        <div class="news-card">
-          <img src="assets/esemeny1.PNG" alt="Pollák E-Sport Story">
-          <div class="news-tartalom">
-            <h3>Pollák E-Sport Story</h3>
-            <p>Olvasson a Pollák E-Sport útjáról és a diákokra gyakorolt hatásáról.</p>
-            <a href="https://www.szentesielet.hu/2023/12/a-pollak-e-sport-story/" target="_blank">Több</a>
-          </div>
+    <section class="rewards">
+        <div class="content">
+            <h1>Helyezési díjak</h1>
+            <ol>
+                <li>
+                    hely: 100.000 Ft-os MediaMarkt ajándékutalvány
+                </li>
+                <li>
+                    hely: 50.000 Ft-os MediaMarkt ajándékutalvány
+                </li>
+                <li>
+                    hely: 10.000 Ft-os MediaMarkt ajándékutalvány
+                </li>
+            </ol>
         </div>
-        <div class="news-card">
-          <img src="assets/esemeny1.PNG" alt="Pollák E-Sport Championship">
-          <div class="news-tartalom">
-            <h3>Pollák E-Sport Bajnokság</h3>
-            <p>Fedezze fel, hogyan inspirálja a Pollák E-Sport Bajnokság a fiatal játékosokat.</p>
-            <a href="https://www.szentesimozaik.hu/2023/11/08/pollak-e-sport-bajnoksag-nem-csupan-a-pollak-diakjainak/" target="_blank">Read More</a>
-          </div>
-        </div>
-        <div class="news-card">
-          <img src="assets/esemeny1.PNG" alt="E-Sport Growth">
-          <div class="news-tartalom">
-            <h3>E-Sport növekedés</h3>
-            <p>Tudja meg, hogyan növekszik az e-sport az iskolákban, és hogyan alakítja a játék jövőjét.</p>
-            <a href="https://fidesz.hu" target="_blank">Több</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-tartalom">
-      <a href="https://www.youtube.com/channel/UCAapvtrYOO7sTtdOH8E2yhQ" target="_blank"><img src="assets/esport-logo.png" alt="Pollák E-Sport Logo" class="logo"></a>
-      <p>&copy; 2025 Pollák E-Sport Bajnokság</p>
-      <a href="https://pollak.hu/" target="_blank">www.pollak.hu</a>
-    </div>
-  </footer>
+    <section class="winners">
+        <div class="content">
+            <h1>Előző nyertesek</h1>
+            
+            <div class="winner-list">
+                <div class="winner-content">
+                    <h2>2023</h2>
+                    <p>
+                        Let Us Cook
+                    </p>
+                    <p>
+                        Counter-Strike 2
+                    </p>
+                </div>
 
-  <script src="app.js" defer></script>
+                <div class="winner-content">
+                    <h2>2022</h2>
+                    <p>
+                        Winner Winner
+                    </p>
+                    <p>
+                        PUBG
+                    </p>
+                </div>
+
+                <div class="winner-content">
+                    <h2>2021</h2>
+                    <p>
+                        Chicken Dinner
+                    </p>
+                    <p>
+                        VALORANT
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="content">
+            <h1>Legfrissebb hírek</h1>
+
+            <div class="news-container">
+                <div class="news-item">
+                    <h2>2023. március 15.</h2>
+                    <p>Újabb csapatok csatlakoztak a versenyhez</p>
+                    <a href="#">Elolvasom...</a>
+                </div>
+                <div class="news-item">
+                    <h2>2023. február 20.</h2>
+                    <p>Újabb csapatok csatlakoztak a versenyhez</p>
+                    <a href="#">Elolvasom...</a>
+                </div>
+                <div class="news-item">
+                    <h2>2023. január 15.</h2>
+                    <p>Újabb csapatok csatlakoztak a versenyhez</p>
+                    <a href="#">Elolvasom...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pollák</p>
+        
+        <div class="sponsors">
+            <img src="logo1.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+            <img src="logo3.png" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
