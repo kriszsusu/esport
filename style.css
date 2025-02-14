@@ -1,312 +1,270 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: 'Exo 2', sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
-  h1, h2, h3 { font-family: 'Orbitron', sans-serif; }
-  
-  a { 
-    color: #00ffcc; 
-    text-decoration: none; 
-    transition: color 0.3s; 
-  }
-  
-  a:hover { color: #ff00cc; }
+    padding: 0;
+    background-color: #240c0c;
+    color: white;
+    text-align: center;
 
-  #hero {
-    height: 100vh;
-    background: url('assets/mediamarkt.png') center/cover no-repeat;
+}
+header {
+    background-color: #280000;
+    padding: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .hero-tartalom h1 {
-    font-size: 4rem;
-    margin: 0;
-    animation: glow 2s infinite alternate, float 3s infinite ease-in-out;
-  }
-  
-  .hero-tartalom p { font-size: 1.5rem; margin: 20px 0; }
-  
-  .cta-button {
-    padding: 10px 20px;
-    background: #00ffcc;
-    color: #0a0a0a;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.5);
-  }
- 
-  .parallax {
-    height: 60vh;
-    background: url('parallax-bg.jpg') center/cover no-repeat fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .parallax .tartalom {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  #bajnoksag-reszletei, #register, #eredmenyek-jutalmak, #elozo-nyertesek, #jatekok {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .timeline, .jutalmak, .winners-grid, .games-grid {
-    display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
-  }
-  
-  .event, .jutalom, .nyertes, .game-card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .event:hover, .jutalom:hover, .nyertes:hover, .game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.5);
-  }
-
-  #regisztracios-urlap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #regisztracios-urlap input, #regisztracios-urlap select {
-    margin: 10px 0;
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #00ffcc;
-    border-radius: 5px;
-    background: #1a1a1a;
-    color: #fff;
-  }
-  
-  #regisztracios-urlap button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #00ffcc;
-    color: #0a0a0a;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-
-  }
-  
-  #regisztracios-urlap button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.5);
-  }
-
-  .game-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .game-info {
-    padding: 20px;
-  }
-  
-  .game-info h3 {
-    margin: 0 0 10px;
-  }
-  
-  .game-info p {
-    font-size: 0.9rem;
-    margin: 0 0 15px;
-  }
-  
-  .game-info a {
-    padding: 10px 20px;
-    background: #00ffcc;
-    color: #0a0a0a;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  
-  .game-info a:hover {
-    background: #ff00cc;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.5);
-  }
-
-  footer {
-    padding: 20px;
-    text-align: center;
-    background: #1a1a1a;
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-    transition: transform 0.3s, filter 0.3s;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #00ffcc);
-  }
-
-  #loading {
+}
+.logo {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 130px;
+}
+.logo2{
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 210px;
+}
+#navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: #0a0a0a;
+    background-color: #280000;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 9999;
-  }
-  
-  .loader {
-    border: 8px solid #1a1a1a;
-    border-top: 8px solid #00ffcc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes glow {
-    0% { text-shadow: 0 0 5px #00ffcc; }
-    100% { text-shadow: 0 0 20px #ff00cc; }
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-  }
-
-#sponsors {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .sponsors-grid {
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+nav {
     display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
-    flex-wrap: wrap;
-  }
-  
-  .sponsor-card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 23%;
-    margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .sponsor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.5);
-  }
-  
-  .sponsor-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    padding: 20px;
-  }
+    gap: 20px;
+}
 
-#news {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .news-grid {
+.nav-links {
     display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
-    flex-wrap: wrap;
-  }
-  
-  .news-card {
-    background: #1a1a1a;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 30%;
-    margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.5);
-  }
-  
-  .news-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .news-tartalom {
-    padding: 20px;
-  }
-  
-  .news-tartalom h3 {
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-  }
-  
-  .news-tartalom p {
-    font-size: 0.9rem;
-    margin: 0 0 15px;
-  }
-  
-  .news-tartalom a {
-    padding: 10px 20px;
-    background: #00ffcc;
-    color: #0a0a0a;
-    border-radius: 5px;
+    gap: 20px;
+    align-items: center;
+    padding-right: 50px;
+}
+nav a {
+    color: white;
+    margin: 0 20px;
     text-decoration: none;
-    transition: all 0.3s;
-  }
-  
-  .news-tartalom a:hover {
-    background: #ff00cc;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.5);
-  }
+    font-size: 18px;
+}
 
-li{
-  list-style-type: none;
+.invert{
+    filter: invert();
+    width: 3%;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+.hero img {
+    width: 100%;
+    opacity: 0.7;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.pollak{
+    color: #f03b33;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+.sport{
+    text-shadow: 1px 1px 2px black;
+    font-size: 70px;
+}
+.ev{
+    color: white;
+    font-size: 130px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.hero button {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+.hero::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    transform: skewY(-3deg)
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #320e0e;
+    margin: auto;
+}
+.content-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 10rem;
+}
+.content-text h2 {
+    font-size: 35px;
+}
+.content-text p {
+    font-size: 30px;
+}
+.content img {
+    width: 250px;
+    height: auto;
+    margin-left: 20px;
+    transform: rotate(25deg);
+    margin-right: 80px;
+}
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    padding-top: 50px;
+}
+
+.timeline-title{
+    margin-top: 3rem;
+    font-size: 40px;
+}
+
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff, rgba(255, 255, 255, 0));
+    z-index: 0;
+}
+
+.timeline .event {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width: 25%;
+}
+
+.timeline .event .circle {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border: 8px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+}
+
+.timeline .event .circle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    display: block;
+}
+
+.timeline .event h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.timeline .event p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #ddd;
+}
+
+.register {
+    background-color: #190a0a;
+    padding: 30px;
+}
+.register h2 {
+    font-size: 28px;
+}
+.register input {
+    display: block;
+    width: 12%;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: #723434;
+    color: white;
+    font-size: 16px;
+}
+.register button {
+    background-color: #9f2a2a;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    width: 13%;
+}
+.register p {
+    font-size: 30px;
+}
+.register a{
+    color: white;
+}
+.register h2{
+    font-size: 40px;
+}
+input[type="text"]::placeholder,input[type="email"]::placeholder{
+    text-align: center;
+}
+footer {
+    padding: 20px;
+    background-color: black;
+    font-size: 16px;
+}
+
+footer a{
+    color: white;
+    font-size: 15px;
+}
+
+
+.white{
+    color: white;
+    font-weight: lighter;
 }
