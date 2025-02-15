@@ -16,4 +16,4 @@ $row = $result->fetch_assoc();
 
 echo $row['count'];
 $conn->close();
-?>
+?> // ez mi a faszert jelenik meg
