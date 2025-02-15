@@ -1,4 +1,4 @@
-/* <?php
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,4 +16,4 @@ $row = $result->fetch_assoc();
 
 echo $row['count'];
 $conn->close();
-?> */
+?>
