@@ -10,13 +10,7 @@ body {
     text-align: center;
 
 }
-header {
-    background-color: #280000;
-    padding: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .logo {
     color: red;
     font-size: 40px;
@@ -58,6 +52,37 @@ nav a {
     margin: 0 20px;
     text-decoration: none;
     font-size: 18px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #280000;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
 }
 
 .invert{
@@ -107,6 +132,12 @@ nav a {
     font-size: 20px;
     cursor: pointer;
     border-radius: 20px;
+    transition: 0.5s;
+}
+.hero button:hover{
+    background-color: #f03b33;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(170, 6, 6, 0.473);
 }
 
 
@@ -239,7 +270,11 @@ nav a {
     cursor: pointer;
     font-size: 17px;
     width: 13%;
+    transition: 0.5s;
 }
+
+
+
 .register p {
     font-size: 30px;
 }
