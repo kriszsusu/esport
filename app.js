@@ -1,32 +1,54 @@
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let email = document.querySelector("input[name='email']");
+    let name = document.querySelector("input[name='fullname']");
+    let studentClass = document.querySelector("input[name='class']");
+    let feedbackMessage = document.getElementById("feedbackMessage");
+    let isValid = true;
 
-window.addEventListener('load', function () {
-    const loading = document.getElementById('loading');
-    loading.style.display = 'none';
-  });
-  
-  let registrationCounter = 0;
-  
-  document.getElementById('regisztracios-urlap').addEventListener('submit', function (e) {
-    e.preventDefault();
-    registrationCounter++;
-    document.getElementById('regisztralas-szamlalo').textContent = registrationCounter;
-    alert('Regisztráció Sikeres!');
-    this.reset();
-  });
+    feedbackMessage.innerHTML = "";
+    feedbackMessage.style.display = "none";
 
-  const carouselItems = document.querySelectorAll('.carousel-item');
-  carouselItems.forEach(item => {
-    item.addEventListener('click', function () {
-      const link = item.querySelector('a').href;
-      window.open(link, '_blank');
+    if (!email.value.includes("@")) {
+        email.style.border = "2px solid red";
+        feedbackMessage.innerHTML += "Érvénytelen email cím!<br>";
+        isValid = false;
+    } else {
+        email.style.border = "2px solid green";
+    }
+    
+    if (name.value.length < 3) {
+        name.style.border = "2px solid red";
+        feedbackMessage.innerHTML += "A névnek legalább 3 karakter hosszúnak kell lennie!<br>";
+        isValid = false;
+    } else {
+        name.style.border = "2px solid green";
+    }
+    
+    if (studentClass.value !== "7" && studentClass.value !== "8") {
+        studentClass.style.border = "2px solid red";
+        feedbackMessage.innerHTML += "Csak 7. és 8. osztályosok jelentkezhetnek!<br>";
+        isValid = false;
+    } else {
+        studentClass.style.border = "2px solid green";
+    }
+    
+    if (isValid) {
+        feedbackMessage.innerHTML = "Sikeres regisztráció!";
+        feedbackMessage.style.color = "green";
+        feedbackMessage.style.display = "block";
+        setTimeout(() => {
+            document.getElementById("registerForm").submit();
+        }, 2000);
+    } else {
+        feedbackMessage.style.color = "red";
+        feedbackMessage.style.display = "block";
+    }
+});
+
+// csapatszamot lekeri aztan megjeleniti (nem teszteltem)
+fetch('team_count.php')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('teamCount').innerText = "Jelenleg " + data + " csapat regisztrált.";
     });
-  });
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
